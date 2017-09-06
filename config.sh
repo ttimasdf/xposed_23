@@ -1,44 +1,35 @@
 ##########################################################################################
 #
-# Magisk
+# Magisk Module Template Config Script
 # by topjohnwu
-# 
-# This is a template zip for developers
 #
 ##########################################################################################
 ##########################################################################################
-# 
+#
 # Instructions:
-# 
+#
 # 1. Place your files into system folder (delete the placeholder file)
 # 2. Fill in your module's info into module.prop
 # 3. Configure the settings in this file (common/config.sh)
 # 4. For advanced features, add shell commands into the script files under common:
 #    post-fs-data.sh, service.sh
 # 5. For changing props, add your additional/modified props into common/system.prop
-# 
+#
 ##########################################################################################
 
 ##########################################################################################
-# Defines
+# Configs
 ##########################################################################################
-
-# NOTE: This part has to be adjusted to fit your own needs
-
-# This will be the folder name under /magisk
-# This should also be the same as the id in your module.prop to prevent confusion
-MODID=xposed
-HELPERID=xposed_helper
 
 # Set to true if you need to enable Magic Mount
 # Most mods would like it to be enabled
-AUTOMOUNT=false
+AUTOMOUNT=true
 
 # Set to true if you need to load system.prop
 PROPFILE=false
 
 # Set to true if you need post-fs-data script
-POSTFSDATA=true
+POSTFSDATA=false
 
 # Set to true if you need late_start service script
 LATESTARTSERVICE=false
@@ -81,10 +72,8 @@ REPLACE="
 # Permissions
 ##########################################################################################
 
-# NOTE: This part has to be adjusted to fit your own needs
-
 set_permissions() {
-  # Default permissions, don't remove them
+  # The following is default permissions, DO NOT remove
   set_perm_recursive  $MODPATH  0  0  0755  0644
 
   set_perm_recursive  $MODPATH/system/bin       0       2000    0755    0755
