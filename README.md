@@ -3,5 +3,9 @@
 This is a port of rovo89's Xposed framework to work systemless-ly through Magisk
 
 ## Changelog
+
+#### v87.3 (Systemless by topjohnwu)
+- Use workaround to prevent bootloop issues
+
 #### v87.2 (Systemless by topjohnwu)
 - Update to latest Magisk Module template

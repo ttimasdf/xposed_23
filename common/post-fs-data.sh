@@ -4,17 +4,20 @@ MODDIR=${0%/*}
 DISABLE=/data/data/de.robv.android.xposed.installer/conf/disabled
 MIRRDIR=/dev/magisk/mirror
 
-log_print() {
-  log -p i -t Magisk "XposedHelper: $1"
-}
-
-bind_mount() {
-  if [ -e $1 -a -e $2 ]; then
-    mount -o bind $1 $2 && log_print "Mount: $1" || log_print "Mount Fail: $1"
-  fi
-}
-
 [ -f $DISABLE ] && exit
+
+IS22=false
+case $MODDIR in
+  *xposed_22* )
+    IS22=true
+    ;;
+esac
+
+mount -o rw,remount /
+ln -s $MODDIR/xposed.prop /xposed.prop
+mount -o ro,remount /
+
+! $IS22 && exit
 
 # Cleanup
 if [ -f $MODDIR/lists ]; then
