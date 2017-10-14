@@ -2,6 +2,6 @@ id=xposed_23
 name=Xposed Framework (SDK 23)
 version=88.0 (Systemless by topjohnwu)
 versionCode=880
-author=rovo89 and wanam
+author=rovo89
 description=Xposed Framework by rovo89, ported to Magisk by topjohnwu
 template=1400
