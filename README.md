@@ -9,11 +9,9 @@ Note for Samsung users: if your device is still on SDK 22 or 23, please use v87.
 
 ## Changelog
 
+#### v88.2
+- Update to official Xposed 88.2
+
 #### v88.0
 - Update to official Xposed 88
 
-#### v87.3
-- Use workaround to prevent bootloop issues
-
-#### v87.2
-- Update to latest Magisk Module template
