@@ -13,11 +13,8 @@ case $MODDIR in
     ;;
 esac
 
-# Fix Magisk bug
-chcon u:object_r:system_file:s0 /magisk
-
 mount -o rw,remount /
-ln -s $MODDIR/xposed.prop /xposed.prop
+cp -f $MODDIR/xposed.prop /xposed.prop
 mount -o ro,remount /
 
 ! $IS22 && exit
