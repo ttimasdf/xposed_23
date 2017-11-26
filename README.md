@@ -3,15 +3,16 @@
 
 The APK is signed by my personal key, you might need to uninstall other versions before installing mine.
 
-Note for Samsung users: if your device is still on SDK 22 or 23, please use v87.3 from the support thread, **v88+ will not work on these old Samsung devices!**
+This is a port of rovo89's Xposed framework to work systemless-ly through Magisk
 
-### [More details in support thread](http://forum.xda-developers.com/showthread.php?t=3388268)
+[More details in support thread](http://forum.xda-developers.com/showthread.php?t=3388268)
 
 ## Changelog
 
-#### v88.2
-- Update to official Xposed 88.2
+#### v87.3 (Systemless by topjohnwu)
 
-#### v88.0
-- Update to official Xposed 88
+- Use workaround to prevent bootloop issues
 
+#### v87.2 (Systemless by topjohnwu)
+
+- Update to latest Magisk Module template
